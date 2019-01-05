@@ -22,5 +22,6 @@ public class Constants {
 	/** The Constant PROPERTY_FILE_PATH. */
 	public final static String PROPERTY_FILE_PATH = WORKING_DIRECTORY + "/src/test/resources/config/test.properties";
 
-	public final static String CHROME_DRIVER_PATH = WORKING_DIRECTORY + "/src/test/resources/chromedriver.exe";
+	/** The Constant CHROME_DRIVER_PATH. */
+	public final static String CHROME_DRIVER_PATH = WORKING_DIRECTORY + "/src/test/resources/drivers/chromedriver.exe";
 }
