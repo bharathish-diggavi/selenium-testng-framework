@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import example.example.context.Constants;
+
 /**
  * The Class has all TestProperties (All properties mentioned in <strong>test.properties</strong> file).
  *

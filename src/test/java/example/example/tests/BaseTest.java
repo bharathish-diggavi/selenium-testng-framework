@@ -1,7 +1,10 @@
 package example.example.tests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -9,13 +12,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
+import example.example.context.Constants;
+import example.example.context.WebDriverContext;
 import example.example.listeners.LogListener;
 import example.example.listeners.ReportListener;
-import example.example.util.Constants;
 import example.example.util.LoggerUtil;
 import example.example.util.MailUtil;
 import example.example.util.TestProperties;
-import example.example.util.WebDriverContext;
 
 /**
  * Every test class should extend this calss.
@@ -63,7 +66,11 @@ public class BaseTest {
 	@BeforeClass
 	protected void setup() {
 		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
-		driver = new ChromeDriver();
+		ChromeOptions ops = new ChromeOptions();
+		ops.addArguments("disable-infobars");
+		driver = new ChromeDriver(ops);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverContext.setDriver(driver);
 	}
 

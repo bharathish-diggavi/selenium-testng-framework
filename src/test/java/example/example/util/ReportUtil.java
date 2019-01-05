@@ -5,6 +5,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 import com.relevantcodes.extentreports.LogStatus;
 
+import example.example.context.WebDriverContext;
 import example.example.report.ExtentReportManager;
 
 /**

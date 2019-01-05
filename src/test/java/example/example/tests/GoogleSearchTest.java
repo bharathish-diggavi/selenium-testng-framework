@@ -3,8 +3,8 @@ package example.example.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import example.example.factory.PageinstancesFactory;
 import example.example.pages.GooglePage;
-import example.example.util.PageinstancesFactory;
 
 /**
  * The Class GoogleSearchTest.

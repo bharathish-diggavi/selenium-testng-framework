@@ -7,7 +7,7 @@ import java.util.Map;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
-import example.example.util.Constants;
+import example.example.context.Constants;
 
 /**
  * The Class handles the report activities.
