@@ -30,7 +30,7 @@ public class ReportUtil {
 	/**
 	 * Adds the screen shot.
 	 *
-	 * @param status the status
+	 * @param status  the status
 	 * @param message the message
 	 */
 	public static void addScreenShot(LogStatus status, String message) {
@@ -38,5 +38,13 @@ public class ReportUtil {
 				+ ((TakesScreenshot) WebDriverContext.getDriver()).getScreenshotAs(OutputType.BASE64);
 		ExtentReportManager.getCurrentTest().log(status, message,
 				ExtentReportManager.getCurrentTest().addBase64ScreenShot(base64Image));
+	}
+
+	public static void logMessage(String message, String details) {
+		ExtentReportManager.getCurrentTest().log(LogStatus.INFO, message, details);
+	}
+
+	public static void logMessage(LogStatus status, String message, String details) {
+		ExtentReportManager.getCurrentTest().log(status, message, details);
 	}
 }
