@@ -12,8 +12,8 @@ The framework uses:
 2. Selenium
 3. TestNG
 4. ExtentReport
-4. Log4j
-4. SimpleJavaMail
+5. Log4j
+6. SimpleJavaMail
 
 Steps to create test cases:
 ----
