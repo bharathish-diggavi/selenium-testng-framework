@@ -50,6 +50,12 @@
 			<artifactId>simple-java-mail</artifactId>
 			<version>5.1.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.3.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

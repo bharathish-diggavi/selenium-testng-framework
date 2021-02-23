@@ -12,13 +12,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
-import example.example.context.Constants;
 import example.example.context.WebDriverContext;
 import example.example.listeners.LogListener;
 import example.example.listeners.ReportListener;
 import example.example.util.LoggerUtil;
 import example.example.util.MailUtil;
 import example.example.util.TestProperties;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Every test class should extend this calss.
@@ -65,7 +65,8 @@ public class BaseTest {
 	 */
 	@BeforeClass
 	protected void setup() {
-		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+//		System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
+		WebDriverManager.chromedriver().setup();
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("disable-infobars");
 		driver = new ChromeDriver(ops);
