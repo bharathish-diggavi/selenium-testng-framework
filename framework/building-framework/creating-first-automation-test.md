@@ -1,2 +1,0 @@
-# Creating first automation test
-
