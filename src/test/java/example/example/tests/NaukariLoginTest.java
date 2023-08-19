@@ -12,7 +12,7 @@ public class NaukariLoginTest extends BaseTest{
         driver.get("https://www.naukri.com/");
         NaukariLoginPage naukariLoginPage = PageinstancesFactory.getInstance(NaukariLoginPage.class);
     naukariLoginPage.clickbutton();
-
+    
         naukariLoginPage.enterEmail("replacewithyourmail@gmail.com").enterPassword("replacewithyourpassword").clickloginbutton1();
         naukariLoginPage.clickoncompleteprofile();
 
